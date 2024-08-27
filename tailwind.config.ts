@@ -1,17 +1,24 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      darkBlue: "#15314B",
+      gray: "#c6d1d8",
+      white: "#fff",
+    },
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        store: "url('/store.jpg')",
+        darkBg: "linear-gradient(to bottom, #15314b 0%, #c6d1d8 100%)",
+        lightBg:
+          "linear-gradient(to bottom, #15314b 0%, #c6d1d8 50%, #fff 100%)",
       },
     },
   },
